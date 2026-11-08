@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Library</OutputType>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Version>1.0.0</Version>
+    <TShockRef Condition="'$(TShockRef)' == ''">$(MSBuildThisFileDirectory)ref</TShockRef>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="TShockAPI"><HintPath>$(TShockRef)\TShockAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="OTAPI"><HintPath>$(TShockRef)\OTAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="TerrariaServer"><HintPath>$(TShockRef)\TerrariaServer.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="ModFramework"><HintPath>$(TShockRef)\ModFramework.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>
